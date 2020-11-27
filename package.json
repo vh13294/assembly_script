@@ -1,0 +1,20 @@
+{
+  "name": "wasi",
+  "version": "1.0.0",
+  "description": "Wasi with AssemblyScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "asc ./src/main.ts -b ./build/main.wasm -t ./build/main.wat --runtime half",
+    "start": "wasmtime --dir . ./build/main.wasm",
+    "build:start": "npm run build && npm run wasmtime"
+  },
+  "author": "Vong Panha Huot",
+  "license": "MIT",
+  "devDependencies": {
+    "assemblyscript": "^0.17.3"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.17.3",
+    "as-wasi": "^0.4.3"
+  }
+}
