@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "asc ./src/main.ts -b ./build/main.wasm -t ./build/main.wat --runtime half",
-    "start": "wasmtime --dir . ./build/main.wasm",
-    "build:start": "npm run build && npm run wasmtime"
+    "wasmtime": "wasmtime --dir . ./build/main.wasm",
+    "start": "npm run build && npm run wasmtime"
   },
   "author": "Vong Panha Huot",
   "license": "MIT",
